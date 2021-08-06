@@ -1,0 +1,91 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.cassette-left[data-state="play"],
+.cassette-right[data-state="play"] {
+  animation: cassetteTape 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes cassetteTape {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.cassette-left[data-state="rewind"],
+.cassette-right[data-state="rewind"] {
+  animation: cassetteTape 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-direction: reverse;
+}
+
+@keyframes cassetteTape {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.cassette-left[data-state="forward"],
+.cassette-right[data-state="forward"] {
+  animation: cassetteTape 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes cassetteTape {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.rightSpeaker[data-state="play"],
+.leftSpeaker[data-state="play"] {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: pulse 0.4s infinite ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+  margin: 0 200px;
+}
+
+.tapes {
+  display: flex;
+  justify-content: center;
+}
+.tape {
+  margin: 0 25px;
+}
